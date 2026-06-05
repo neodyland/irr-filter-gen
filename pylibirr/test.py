@@ -4,8 +4,8 @@ import asyncio
 
 
 async def main() -> None:
-    client = await pylibirr.IRRClient()
-    print(await client.route(152873))
+    routes = await pylibirr.fetch_routes(152873)
+    print(routes)
 
 
 asyncio.run(main())
