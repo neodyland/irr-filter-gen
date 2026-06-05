@@ -1,0 +1,15 @@
+[package]
+name = "pylibirr"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pylibirr"
+crate-type = ["cdylib"]
+
+[dependencies]
+libirr = { version = "0.1.0", path = "../libirr" }
+pyo3 = { version = "0.28.3", features = ["experimental-async"] }
+pyo3-async-runtimes = { version = "0.28.0", features = ["tokio", "tokio-runtime"] }
+tokio.workspace = true
