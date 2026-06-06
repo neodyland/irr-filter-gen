@@ -85,7 +85,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: wheels-musllinux-${{ matrix.platform.target }}
-          path: dist
+          path: pylibirr/dist
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
